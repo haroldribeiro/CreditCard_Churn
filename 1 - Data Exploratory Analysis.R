@@ -1,4 +1,5 @@
 library(descr) #pivot table 
+library(e1071) #skwed
 
 #-------------------------------------------#
 #1. IMPORTING THE DATASET AND FIRST CHECKS  #
@@ -38,8 +39,15 @@ churn_data <- churn_data[,-1]
 # Quantitative variables quick description
 summary(churn_data[, c(-2,-4,-5,-6,-7)])
 
-hist(churn_data$Customer_Age)
-hist(churn_data$Months_on_book)
+age_dist <- round(skewness(churn_data$Customer_Age),2)
+
+#Distribution of customer age
+hist(churn_data$Customer_Age, main="Distribution of customers age",sub=paste("sknewness of ", age_dist, "(Normal distribution)"), col = "lightblue", xlab = "Age")
+
+
+#Distribution of customers relationship time
+hist(churn_data$Months_on_book, main="Distribution of relationship time",col = "orange", xlab = "time (in months)")
+
 
 #Qualitative variables
 par(mfrow=c(1,1)) 
