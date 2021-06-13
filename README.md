@@ -1,7 +1,7 @@
 # Predict churning customer: Overview
 
 * Created a model in order to identify customers who have more likelihood to leave. The idea is predict who is going to churn and then create some marketing actions like offering better services or some discount services. 
-* Dataset has more than 10.000 observations, 20 features and approximately 16% of churning 
+* Dataset has more than 10.000 observations, 20 variables and approximately 16% of churning 
 * It was utilized Logistic regression model 
 
 ## Exploratory Data Analysis
@@ -12,6 +12,17 @@ I analyzed all the features distributions of the data. I applied **univariate** 
 ![qty contacts](qty_contacts.png)
 ![transac counts](transactions_count.png)
 
+## Model Building 
+
+In order to solve this business problem, I chose the **logistic regression model** because it is model very well accepted *(benchmark)* in the companies. Some of the reasons are because the model gives a **probability as an output** (classification model) where you can create **groups of probabilities** to focus on a specific slice and also because is **easy to interpret the model output** in order to explain what is happenning.
+
+Steps applied to create the model:
+
+* The target variable was transformed as bynary type
+* The dataset were splitted between train (70%) and test (30%).
+* **Information Value (IV)** technique was applied to check the predictive power of independent variables against the target variable
+* **Dimensionality reduction** technique was applied utilizing **backward** technique with **10% of significance** and **IV > 0.03**
+* After create the model, I checked the **multicollinearity** between the variables assuming **VIF > 5**
 
 ## Data Dictionary 
 
