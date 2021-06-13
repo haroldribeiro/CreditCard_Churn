@@ -4,19 +4,28 @@
 * Dataset has more than 10.000 observations, 20 features and approximately 16% of churning 
 * It was utilized Logistic regression model 
 
-# Data Dictionary 
+## Exploratory Data Analysis
+
+I analyzed all the features distributions of the data. I applied **univariate** and **bivariate analysis** in order to explore de data and understand the distribution behaviors. Below are a few highlights from the exploration analysis.
+
+![dist age](dist_age.png) 
+![qty contacts](qty_contacts.png)
+![transac counts](transactions_count.png)
+
+
+## Data Dictionary 
 
 | Feature     |     Type    |  Description | 
 | ----------- | ----------- | ----------- |
 | Clientnum       |Num       | Client number. Unique identifier for the customer holding the account         |
-| Attrition_Flag  |Char| Internal event (customer activity) variable - if the account is closed then 1 else 0        |
-| Customer_Age    |Num | Demographic variable - Customer's Age in Years |
-| Gender          |Char| Demographic variable - M=Male, F=Female |
-| Dependent_count |Num | Demographic variable - Number of dependents |
-| Education_Level |Char| Demographic variable - Educational Qualification of the account holder (example: high school, college graduate, etc.)|
-| Marital_Status  |Char| Demographic variable - Married, Single, Unknown | 
-| Income_Category |Char| Demographic variable - Annual Income Category of the account holder (< $40K, $40K - 60K, $60K - $80K, $80K-$120K, > $120K, Unknown)|
-| Card_Category   |Char| Product Variable - Type of Card (Blue, Silver, Gold, Platinum) |
+| Attrition_Flag  |Char| Internal event (customer activity) variable       |
+| Customer_Age    |Num | Customer's Age in Years |
+| Gender          |Char| M=Male, F=Female |
+| Dependent_count |Num | Number of dependents |
+| Education_Level |Char| Educational Qualification of the account holder (example: high school, college graduate, etc.)|
+| Marital_Status  |Char| Married, Single, Unknown | 
+| Income_Category |Char| Annual Income Category (< $40K, $40K - 60K, $60K - $80K, $80K-$120K, > $120K, Unknown)|
+| Card_Category   |Char| Type of Card (Blue, Silver, Gold, Platinum) |
 | Months_on_book  |Num| Months on book (Time of Relationship) |
 | Total_Relationship_Count |Num| Total no. of products held by the customer |
 | Months_Inactive_12_mon|Num|Total no. of products held by the customer |
@@ -32,7 +41,7 @@
 
 
 
-# Source
+## Source
 
 It was used a dataset from Kaggle [Credit Card customer](https://www.kaggle.com/sakshigoyal7/credit-card-customers).
 
