@@ -14,15 +14,20 @@ I analyzed all the features distributions of the data. I applied **univariate** 
 
 ## Model Building 
 
-In order to solve this business problem, I chose the **logistic regression model** because it is model very well accepted *(benchmark)* in the companies. Some of the reasons are because the model gives a **probability as an output** (classification model) where you can create **groups of probabilities** to focus on a specific slice and also because is **easy to interpret the model output** in order to explain what is happenning.
+In order to solve this business problem, I chose the **logistic regression model** because it is model very well accepted *(benchmark)* in the companies. Some of the reasons are because the model gives a **probability as an output** (classification model) where you can create **groups of probabilities** to focus on a specific slice and also because it is **easy to interpret the output** in order to explain what is happenning.
 
 Steps applied to create the model:
 
-* The target variable was transformed as bynary type
-* The dataset were splitted between train (70%) and test (30%).
+* The target variable was transformed as **bynary** type
+* The dataset were splitted between train **(70%)** and test **(30%)**.
 * **Information Value (IV)** technique was applied to check the predictive power of independent variables against the target variable
 * **Dimensionality reduction** technique was applied utilizing **backward** technique with **10% of significance** and **IV > 0.03**
 * After create the model, I checked the **multicollinearity** between the variables assuming **VIF > 5**
+
+## Model performance 
+
+It were used **confusion matrix** and **ROC curve** technique to validate and test peformance.
+
 
 ## Data Dictionary 
 
