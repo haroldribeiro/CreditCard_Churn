@@ -26,7 +26,9 @@ Steps applied to create the model:
 
 ## Model performance 
 
-It were used **confusion matrix** and **ROC curve** technique to validate and test peformance.
+**Confusion matrix**  technique were applied to validate and test performance. The model had a good stability between the three measures (accuracy, sensitivity and specificity)
+
+![matrix](model_performance.png)
 
 
 ## Data Dictionary 
